@@ -41,6 +41,7 @@ body {
   overflow-x: hidden;
   cursor: none;
   line-height: 1.6;
+  max-width: 100vw;
 }
 
 /* ========================================
@@ -215,6 +216,8 @@ body {
     transform 1s ease;
   white-space: nowrap;
   letter-spacing: -0.5px;
+  text-align: center;
+  max-width: 90vw;
 }
 
 .intro-name.visible {
@@ -239,6 +242,8 @@ body {
     transform 1s ease;
   white-space: nowrap;
   letter-spacing: 1px;
+  text-align: center;
+  max-width: 90vw;
 }
 
 .intro-subtitle.visible {
@@ -263,6 +268,8 @@ body {
     transform 1s ease;
   white-space: nowrap;
   font-style: italic;
+  text-align: center;
+  max-width: 90vw;
 }
 
 .intro-tagline.visible {
@@ -311,6 +318,7 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-shrink: 0;
 }
 
 .header-profile {
@@ -359,6 +367,14 @@ body {
   display: flex;
   gap: 6px;
   margin-left: auto;
+  flex-shrink: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-link {
@@ -376,6 +392,8 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav-icon {
@@ -505,6 +523,7 @@ body {
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 15px;
 }
 
 .section-line {
@@ -587,6 +606,8 @@ body {
   line-height: 1.85;
   margin-bottom: 15px;
   font-size: 0.95rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .about-info-grid {
@@ -630,6 +651,8 @@ body {
   font-size: 0.88rem;
   font-weight: 500;
   color: var(--text-bright);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* ========================================
@@ -792,6 +815,8 @@ body {
   font-weight: 600;
   margin-bottom: 6px;
   color: var(--text-bright);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .cert-card-issuer {
@@ -849,6 +874,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .carousel-btn:hover {
@@ -867,6 +893,8 @@ body {
 .carousel-dots {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .carousel-dot {
@@ -909,6 +937,7 @@ body {
   pointer-events: none;
   transition: opacity 0.4s ease;
   cursor: none;
+  padding: 15px;
 }
 
 .card-modal-overlay.active {
@@ -919,7 +948,7 @@ body {
 .card-modal {
   display: flex;
   max-width: 1050px;
-  width: 92%;
+  width: 100%;
   max-height: 82vh;
   background: var(--dark2);
   border-radius: 22px;
@@ -994,6 +1023,8 @@ body {
   text-align: center;
   margin-bottom: 8px;
   color: var(--text-bright);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .modal-issuer {
@@ -1001,6 +1032,7 @@ body {
   font-size: 0.95rem;
   margin-bottom: 15px;
   font-weight: 500;
+  text-align: center;
 }
 
 .modal-badge-large {
@@ -1033,6 +1065,8 @@ body {
   line-height: 1.85;
   margin-bottom: 25px;
   font-size: 0.92rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .modal-detail-row {
@@ -1071,6 +1105,8 @@ body {
   font-size: 0.92rem;
   font-weight: 500;
   color: var(--text-bright);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .modal-skills {
@@ -1178,6 +1214,7 @@ body {
   align-items: center;
   gap: 12px;
   margin-bottom: 18px;
+  flex-wrap: wrap;
 }
 
 .logo-icon {
@@ -1191,6 +1228,7 @@ body {
   font-weight: 800;
   font-size: 0.85rem;
   color: #fff;
+  flex-shrink: 0;
 }
 
 .logo-text {
@@ -1200,6 +1238,8 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .footer-brand p {
@@ -1207,11 +1247,14 @@ body {
   line-height: 1.75;
   font-size: 0.88rem;
   margin-bottom: 22px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .social-links {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .social-link {
@@ -1227,6 +1270,7 @@ body {
   transition: all 0.35s ease;
   text-decoration: none;
   color: var(--text-muted);
+  flex-shrink: 0;
 }
 
 .social-link:hover {
@@ -1286,6 +1330,9 @@ body {
 .footer-contact-value {
   font-size: 0.88rem;
   color: var(--text);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 
 /* Education Timeline */
@@ -1329,12 +1376,16 @@ body {
   font-weight: 600;
   margin-bottom: 3px;
   color: var(--text-bright);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .education-school {
   font-size: 0.8rem;
   color: var(--primary);
   margin-bottom: 2px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .education-year {
@@ -1386,6 +1437,8 @@ body {
   padding-top: 35px;
   margin-top: 50px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .footer-bottom p {
@@ -1448,81 +1501,486 @@ body {
 }
 
 /* ========================================
-   RESPONSIVE
+   RESPONSIVE — TABLET (max-width: 1024px)
+   PC view is NOT affected by anything below
    ======================================== */
 @media (max-width: 1024px) {
   .cert-slide {
     flex-wrap: wrap;
   }
+
   .cert-card {
     width: 300px;
   }
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: 35px;
   }
+
   .about-grid {
     gap: 50px;
   }
 }
 
+/* ========================================
+   RESPONSIVE — SMALL TABLET (max-width: 900px)
+   ======================================== */
 @media (max-width: 900px) {
   .about-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
+  .about-image {
+    max-width: 300px;
+  }
+
   .card-modal {
     flex-direction: column;
     max-height: 90vh;
   }
+
   .card-modal-left {
     flex: 0 0 auto;
-    padding: 30px;
+    padding: 25px 20px;
   }
+
+  .card-modal-right {
+    padding: 25px 20px;
+  }
+
   .nav-links {
     gap: 4px;
   }
+
   .nav-link {
     padding: 8px 14px;
     font-size: 0.78rem;
   }
+
   .nav-icon {
     display: none;
   }
+
   .section-title {
     font-size: 2.2rem;
   }
+
+  .footer-header h2 {
+    font-size: 2rem;
+  }
 }
 
+/* ========================================
+   RESPONSIVE — PHONE (max-width: 600px)
+   ======================================== */
 @media (max-width: 600px) {
-  .section {
-    padding: 70px 20px;
+  /* ----- Intro ----- */
+  .intro-image-container.center {
+    width: 180px;
+    height: 180px;
   }
-  .footer-grid {
-    grid-template-columns: 1fr;
+
+  .intro-name {
+    font-size: 1.6rem;
+    white-space: normal;
+    top: calc(50% + 115px);
+    padding: 0 20px;
+    max-width: 100vw;
+    text-align: center;
   }
-  .footer-content {
-    padding: 30px 20px 25px;
+
+  .intro-subtitle {
+    font-size: 0.85rem;
+    white-space: normal;
+    top: calc(50% + 155px);
+    padding: 0 20px;
+    max-width: 100vw;
+    text-align: center;
   }
-  .about-info-grid {
-    grid-template-columns: 1fr;
+
+  .intro-tagline {
+    font-size: 0.75rem;
+    white-space: normal;
+    top: calc(50% + 180px);
+    padding: 0 20px;
+    max-width: 100vw;
+    text-align: center;
   }
+
+  /* ----- Header ----- */
   .header {
-    padding: 0 12px;
+    padding: 0 10px;
+    gap: 5px;
   }
+
   .header-identity {
     display: none;
   }
+
+  .header-profile {
+    width: 38px;
+    height: 38px;
+  }
+
+  .nav-links {
+    gap: 3px;
+    margin-left: 8px;
+  }
+
+  .nav-link {
+    padding: 6px 10px;
+    font-size: 0.7rem;
+  }
+
+  .nav-icon {
+    display: none;
+  }
+
+  /* ----- Sections ----- */
+  .section {
+    padding: 60px 16px;
+  }
+
+  .section-tag {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.85rem;
+    padding: 0 10px;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  /* ----- About ----- */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-image {
+    max-width: 250px;
+  }
+
+  .about-text h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .about-text p {
+    font-size: 0.88rem;
+  }
+
+  .about-info-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .about-info-value {
+    font-size: 0.82rem;
+  }
+
+  /* ----- Cert Cards ----- */
+  .cert-slide {
+    padding: 10px 10px;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
   .cert-card {
     width: 100%;
     max-width: 340px;
   }
-  .cert-slide {
-    padding: 10px 15px;
+
+  .cert-card-image {
+    height: 150px;
   }
+
+  .cert-card-image .cert-icon {
+    font-size: 3rem;
+  }
+
+  .cert-card-body {
+    padding: 16px;
+  }
+
+  .cert-card-title {
+    font-size: 0.95rem;
+  }
+
+  .carousel-nav {
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .carousel-btn {
+    width: 42px;
+    height: 42px;
+  }
+
+  /* ----- Modal ----- */
+  .card-modal-overlay {
+    padding: 10px;
+    align-items: flex-start;
+    padding-top: 60px;
+  }
+
+  .card-modal {
+    flex-direction: column;
+    max-height: 85vh;
+    border-radius: 16px;
+    width: 100%;
+  }
+
+  .card-modal-left {
+    padding: 20px 15px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .modal-icon {
+    font-size: 3.5rem;
+  }
+
+  .modal-icon-ring {
+    width: 90px;
+    height: 90px;
+  }
+
+  .modal-title {
+    font-size: 1.1rem;
+  }
+
+  .modal-issuer {
+    font-size: 0.85rem;
+  }
+
+  .card-modal-right {
+    padding: 20px 15px;
+  }
+
+  .card-modal-right h3 {
+    font-size: 1rem;
+  }
+
+  .card-modal-right p {
+    font-size: 0.85rem;
+  }
+
+  .modal-skill {
+    padding: 5px 12px;
+    font-size: 0.72rem;
+  }
+
+  .modal-close {
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .modal-detail-row .detail-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .detail-value {
+    font-size: 0.82rem;
+  }
+
+  /* ----- Footer ----- */
+  .footer-content {
+    padding: 25px 16px 20px;
+  }
+
+  .footer-header {
+    margin-bottom: 40px;
+  }
+
+  .footer-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .footer-header p {
+    font-size: 0.88rem;
+    padding: 0 10px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-brand {
+    padding-right: 0;
+  }
+
+  .logo-text {
+    font-size: 1rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.82rem;
+  }
+
+  .footer-section h4 {
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+
+  .footer-contact-item {
+    margin-bottom: 14px;
+    padding: 6px;
+  }
+
+  .footer-contact-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .footer-contact-label {
+    font-size: 0.68rem;
+  }
+
+  .footer-contact-value {
+    font-size: 0.82rem;
+  }
+
+  .education-item {
+    padding: 12px 12px;
+  }
+
+  .education-degree {
+    font-size: 0.82rem;
+  }
+
+  .education-school {
+    font-size: 0.75rem;
+  }
+
+  .education-year {
+    font-size: 0.68rem;
+  }
+
+  .quick-link {
+    padding: 8px 10px;
+    font-size: 0.82rem;
+  }
+
   .footer-bottom {
     flex-direction: column;
-    gap: 15px;
     text-align: center;
+    justify-content: center;
+    gap: 12px;
+    padding-top: 25px;
+    margin-top: 35px;
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem;
+  }
+
+  .back-to-top {
+    font-size: 0.75rem;
+    padding: 8px 14px;
+  }
+
+  .footer-top-wave svg {
+    height: 50px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE — VERY SMALL PHONE (max-width: 380px)
+   ======================================== */
+@media (max-width: 380px) {
+  .intro-image-container.center {
+    width: 140px;
+    height: 140px;
+  }
+
+  .intro-name {
+    font-size: 1.3rem;
+    top: calc(50% + 95px);
+  }
+
+  .intro-subtitle {
+    font-size: 0.75rem;
+    top: calc(50% + 130px);
+  }
+
+  .intro-tagline {
+    font-size: 0.68rem;
+    top: calc(50% + 155px);
+  }
+
+  .header {
+    height: 60px;
+  }
+
+  .header-profile {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-link {
+    padding: 5px 8px;
+    font-size: 0.65rem;
+  }
+
+  .main-content {
+    padding-top: 60px;
+  }
+
+  .section {
+    padding: 45px 12px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .about-image {
+    max-width: 200px;
+  }
+
+  .about-text h3 {
+    font-size: 1.15rem;
+  }
+
+  .about-text p {
+    font-size: 0.82rem;
+  }
+
+  .about-info-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cert-card-image {
+    height: 130px;
+  }
+
+  .footer-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .carousel-btn svg {
+    width: 14px;
+    height: 14px;
   }
 }
